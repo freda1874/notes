@@ -1,0 +1,32 @@
+Install Ruby Using RVM (Ruby Version Manager):
+Ruby is essential for many tools in the library. 
+Open your terminal and run the following command to install RVM:
+
+\curl -sSL https://get.rvm.io | bash -s stable
+
+Once RVM is installed, you can install Ruby. 
+Install Ruby 3.1.4 using RVM with this command:
+
+rvm install ruby-3.1.4
+
+Install Homebrew:
+New installations may require Homebrew, a package manager for macOS. Install it by running:
+Find the latest CLI on official site:https://brew.sh/
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+As I kpt running into error "Could not locate Gemfile" so I manually installed gem install : 
+net-ftp -v 0.1.3
+followed by this https://rubygems.org/gems/net-ftp/versions/0.1.3?locale=en
+
+After setting up Ruby and Homebrew, navigate to the folder containing your project's Gemfile. In my case, use:
+
+cd /Users/freda.luo/.rvm/gems/ruby-3.1.4/gems/net-ftp-0.1.3
+
+
+Note: Ensure you are in the directory that contains the Gemfile before running bundle install. This command installs all the dependencies listed in the Gemfile, which are required for your project.
+
+
+In the project directory, install the necessary Ruby gems by running:
+bundle install
+(needs to run in the directory where Xcode project is installed)
